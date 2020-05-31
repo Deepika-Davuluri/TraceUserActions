@@ -1,1 +1,2 @@
-web: gunicorn TraceUserActions.wsgi
+web: gunicorn TraceUserActions.wsgi:application --log-file - --log-level debug
+manage.py migrate
