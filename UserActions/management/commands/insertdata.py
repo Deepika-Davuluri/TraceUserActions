@@ -8,6 +8,7 @@ from UserActions.models import ActivityPeriod
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
+        User.objects.create_superuser('root', 'Welcome@2020')
         for i in range(1, 11):
             user_name = 'user_' + str(i)
             User.objects.create_user(user_name, password='Welcome@2020')
